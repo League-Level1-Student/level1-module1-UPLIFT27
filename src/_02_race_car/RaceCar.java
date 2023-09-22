@@ -7,10 +7,11 @@ package _02_race_car;
 
 
 public class RaceCar {
+	
 	private String brand;
 	private int positionInRace;
 	public boolean damaged = false;
-	
+
 	/**
 	 * 
 	 * @param brand Brand of race car
@@ -25,6 +26,8 @@ public class RaceCar {
 		
 		this.brand = brand;
 		this.positionInRace = positionInRace;
+		
+	
 	}
 	
 	public int getPositionInRace() {
@@ -76,4 +79,8 @@ public class RaceCar {
 			System.out.println("Your car has moved into position number "+positionInRace+"!");
 		}
 	}
-}
+	
+	
+	
+	
+	}
