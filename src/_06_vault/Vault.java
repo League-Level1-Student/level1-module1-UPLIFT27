@@ -19,4 +19,26 @@ public class Vault {
 	public boolean tryCode(int guess) {
 		return guess == secret;
 	}
+
 }
+ class SecretAgent {
+	
+	void findCode(Vault secret)
+	{
+		for(int i=0; i<10000000 ; i++)
+		{
+		boolean correct =	secret.tryCode(i);
+			
+			if(correct)
+			{
+				System.out.print("The secret agent found out that the code is "+ i);
+			}
+		}
+	}
+	
+	
+}
+
+
+	
+	
