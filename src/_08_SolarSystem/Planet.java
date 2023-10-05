@@ -11,10 +11,23 @@ public class Planet {
      */
     int x, y, width, height;
     int diameter;
+    String Color;
+    int distanceFromtheSun;
+    int OribitalPeriod;
     
-    public Planet(int diameterPixels) {
+    
+    
+    
+    public Planet(int diameterPixels, String Color, int distanceFromtheSun, int OribitalPeriod) {
         this.diameter = diameterPixels;
-    }
+        this.Color = Color;
+        this.distanceFromtheSun = distanceFromtheSun;
+        this.OribitalPeriod = OribitalPeriod;
+        
+}
+   
+    
+ 
 
     public void draw(Graphics g, int numDays) {
         /*
@@ -61,6 +74,9 @@ public class Planet {
 
             moon.draw(g, numDays, centerX, centerY);
         }
+  
+    
+    
     }
     
     
