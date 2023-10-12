@@ -56,6 +56,7 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
     Color boardColor = new Color(138, 198, 193);
     Game gameFrame = new Game("Hungry Hungry Hippos");
     boolean startGame = false;
+    Hippo Lizzie = new Hippo("Lizzie",Color.PINK)
 
     /*
      * Create your hippo objects here. The "left" input parameter indicates
@@ -68,6 +69,7 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
         gameFrame.start();
         gameFrame.setSize(GAME_WIDTH, GAME_HEIGHT);
         setup();
+        
         
         String instructions = "Press '1' to make the hippo eat\n";
         instructions += "Press 's' to start";
