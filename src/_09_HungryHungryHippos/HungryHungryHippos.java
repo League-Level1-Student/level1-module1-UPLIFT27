@@ -56,13 +56,17 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
     Color boardColor = new Color(138, 198, 193);
     Game gameFrame = new Game("Hungry Hungry Hippos");
     boolean startGame = false;
-    Hippo Lizzie = new Hippo("Lizzie",Color.PINK)
-
+    Hippo Lizzie = new Hippo("up","Lizzie",Color.PINK);
+    Hippo Homer = new Hippo("down", "Homer", Color.GREEN);
+    Hippo Henry = new Hippo("right", "Henry", Color.ORANGE);
+    Hippo Harry = new Hippo("left", "Harry", Color.YELLOW);
+  
     /*
      * Create your hippo objects here. The "left" input parameter indicates
      * which side the hippo is drawn.
      */
-    Hippo myHippoObject = new Hippo("left");
+  
+    
 
     public HungryHungryHippos() {
         gameFrame.setScene(this);
@@ -98,7 +102,12 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
         /*
          * Draw all the hippos here
          */
-        myHippoObject.draw(g);
+        
+        Lizzie.draw(g);
+        Homer.draw(g);
+        Henry.draw(g);
+        Harry.draw(g);
+        
         
         if (startGame) {
             /*
@@ -111,7 +120,10 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
              * checkHippoEating(myHippoObject) method. Make sure to do
              * this for all of your hippos!
              */
-            checkHippoEating(myHippoObject);
+            checkHippoEating(Harry);
+            checkHippoEating(Lizzie);
+            checkHippoEating(Henry);
+            checkHippoEating(Homerif);
         }
     }
 
@@ -125,13 +137,13 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
         if (keyCode == KeyEvent.VK_S) {
             startGame = true;
         } else if (keyCode == KeyEvent.VK_1) {
-            myHippoObject.eat();
+            Harry.eat();
         } else if (keyCode == KeyEvent.VK_2) {
-            
+            Lizzie.eat();
         } else if (keyCode == KeyEvent.VK_3) {
-            
+            Henry.eat();
         } else if (keyCode == KeyEvent.VK_4) {
-            
+            Homer.eat();
         }
     }
     

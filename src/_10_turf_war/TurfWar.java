@@ -21,6 +21,20 @@ public class TurfWar extends PApplet {
         int downKey;
         int rightKey;
 
+        public Player(int x, int y, int speed, int playerSize, int playerColor, int upKey, int leftKey, int downKey, int rightKey)
+        {
+        	this.x = x;
+        	this.y = y;
+        	this.speed = speed;
+        	this.playerSize = playerSize;
+        	this.playerColor = playerColor;
+        	this.upKey = upKey;
+        	this.downKey = downKey;
+        	this.rightKey = rightKey;
+        }
+        
+        
+        
         /*
          * The member variables below do not need to be initialized in the
          * constructor.
@@ -35,8 +49,14 @@ public class TurfWar extends PApplet {
             /*
              * 2. Draw a rectangle to represent the the Player using its color,
              * coordinates and size.
-             */
+             
+        	
+        
+        	
+        	
+        	
             
+        	
         }
 
         void update() {
@@ -58,6 +78,18 @@ public class TurfWar extends PApplet {
              * Note: You do not need to use the statsBoardLine for the 
              * other directions.
              */
+            if(moveDown)
+            {
+            	y+=speed;
+            }
+            if(moveRight)
+            {
+            	x+=speed;
+            }
+            if(moveLeft)
+            {
+            	x-=speed;
+            }
             
         }
 
@@ -108,7 +140,9 @@ public class TurfWar extends PApplet {
      * 4. Declare two variables of the Player class called player1 and player2.
      * Do not initialize them yet.
      */
-
+    
+   Player player1 ;
+    Player player2;
     
 
     // Do not change these variables
@@ -130,6 +164,9 @@ public class TurfWar extends PApplet {
     public void settings() {
         // 5. Set the size for your sketch. Make it at least 300x300.
        
+    	size(300,300);
+    	
+    	
     }
 
     @Override
@@ -142,8 +179,12 @@ public class TurfWar extends PApplet {
 
         // 6. Set the background color.
 
-
+        background(100,100,100);
+        	
+        
         // 7. Call the noStroke Method.
+        
+        noStroke();
         
         
         /*
@@ -158,6 +199,9 @@ public class TurfWar extends PApplet {
          * not select black, white or the color you used for your background as it
          * will give that player an unfair advantage.
          */
+        
+        player1 
+        player2 
 
         
     }
