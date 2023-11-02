@@ -123,7 +123,7 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
             checkHippoEating(Harry);
             checkHippoEating(Lizzie);
             checkHippoEating(Henry);
-            checkHippoEating(Homerif);
+            checkHippoEating(Homer);
         }
     }
 
