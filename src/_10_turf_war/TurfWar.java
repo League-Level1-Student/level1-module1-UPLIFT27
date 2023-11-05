@@ -31,6 +31,7 @@ public class TurfWar extends PApplet {
         	this.upKey = upKey;
         	this.downKey = downKey;
         	this.rightKey = rightKey;
+        	this.leftKey = leftKey;
         }
         
         
@@ -203,8 +204,8 @@ public class TurfWar extends PApplet {
        
         // public Player(int x, int y, int speed, int playerSize, int playerColor, int upKey, int leftKey, int downKey, int rightKey)
         
-        player1 = new Player(0,10,10,10,Color.BLUE.getRGB(),UP,LEFT, DOWN, RIGHT);
-        player2 = new Player(0,10,10,10,Color.RED.getRGB(), W, A, S,D);
+        player1 = new Player(0,50,10,10,Color.BLUE.getRGB(),UP,LEFT, DOWN, RIGHT);
+        player2 = new Player(0,50,10,10,Color.RED.getRGB(), W, A, S,D);
 
         
     }
