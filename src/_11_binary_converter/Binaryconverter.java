@@ -1,5 +1,6 @@
 package _11_binary_converter;
 
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
@@ -22,18 +23,25 @@ public class Binaryconverter implements ActionListener {
 	
 	JButton button = new JButton();
 
+public Binaryconverter() {
 	button.setText("convert");
 	
-	button.addActionLIstener(this);
+	button.addActionListener(this);
 	
-	String texts = JOptionPane.showInputMessageDialog(null, "Convert 8 bits to binary")
+	frame.setVisible(true);
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
-	jtext.setText(texts)
-			
-	if(button.this)
-	{
-		convert(texts);
-	}
+	frame.add(panel);
+
+	panel.add(label);
+	panel.add(button);
+	panel.add(jtext);
+	
+	frame.pack();
+	
+}
+	
+
 	
 	String convert(String input) {
 	    if(input.length() != 8){
@@ -55,4 +63,28 @@ public class Binaryconverter implements ActionListener {
 	    }
 	}
 
+	
+
+
+
+	
+
+
+
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
+String texts = 	jtext.getText();
+
+String binary = convert(texts);
+
+label.setText(binary);
+
+frame.pack();
+
+}
+	
+	
 }
